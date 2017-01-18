@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!--meta name="viewport" content="width=device-width, initial-scale=1"-->
+  <link type="text/css" rel="stylesheet" href="../public/css/layout.css"/>
+  <link type="text/css" rel="stylesheet" href="../public/css/bootstrap.css"/>
+  <link type="text/css" rel="stylesheet" href="../public/css/animate.css"/>
+  <link type="text/css" rel="stylesheet" href="../public/css/mdl-zoor-nav.css"/>
+
+  <link type="text/css" rel="stylesheet" href="../public/material/css/material.css"/>
+  <link type="text/css" rel="stylesheet" href="../public/material/css/mdlslidenav.css"/>
+  <link type="text/css" rel="stylesheet" href="../public/material/css/materialadmin.css"/>
+  <link type="text/css" rel="stylesheet" href="../public/material/css/font-awesome.css"/>
+
+  <script src="../public/js/jquery-3.1.1.js"></script>
+  <script src="../public/js/bootstrap.js"></script>
+
+  <script src="../public/material/js/material.js"></script>
+  <script src="../public/material/js/mdlslidenav.js"></script>
+  <script src="../public/material/js/mdlripple.js"></script>
+  <script src="../public/material/js/mdlform.js"></script>
+
+  <title>Material Design Page</title>
+</head>
+
+<body>
+  <!-- Always shows a header, even in smaller screens. -->
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+      <div class="mdl-layout__header-row">
+        <span class="android-title mdl-layout-title">
+         <h4 class="title-name title-text">学生成绩管理系统</h4>
+        </span>
+        <button type="button" class="hamburger is-closed animated fadeInLeft" data-toggle="offcanvas">
+          <span class="hamb-top"></span>
+          <span class="hamb-middle"></span>
+          <span class="hamb-bottom"></span>
+        </button>
+        <!-- Add spacer, to align navigation to the right 使下面的导航按钮靠右对齐　-->
+        <div class="mdl-layout-spacer"></div>
+        <!-- Navigation. if want to hide it in small screens, add : mdl-layout--large-screen-only. -->
+        <nav class="mdl-navigation">
+          <!--search-->
+          <ul class="mdl-zoor-search mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+            <label class="mdl-zoor-si mdl-button mdl-js-button mdl-button--icon" for="search-field">
+              <i class="fa fa-fw fa-search"></i>
+            </label>
+            <div class="mdl-textfield__expandable-holder">
+              <input class="mdl-textfield__input" type="text" id="search-field">
+            </div>
+          </ul><!--/search-->
+          <!--notify-->
+          <ul class="mdl-zoor-notify">
+            <li class="dropdown">
+              <a href="#" data-toggle="dropdown" class="mdl-zoor-si mdl-button--icon mdl-js-button mdl-button">
+                <!--div class="material-icons">notifications_none</div-->
+                <i class="fa fa-fw fa-bell"></i>
+              </a>
+              <sup class="badge style-danger badge-nav">4</sup>
+              <!-- dropdown -->
+              <ul class="dropdown-menu animation-dock">
+                <li class="dropdown-header">You got 2 message</li>
+                <li><span>message1</span></li>
+                <li><span>message2</span></li>
+              </ul><!--end .dropdown-menu -->
+            </li>
+          </ul><!--/notify-->
+          <!--user-->
+          <ul class="header-nav header-nav-profile">
+            <!--user logo-->
+            <li class="dropdown">
+              <a href="#" data-toggle="dropdown" class="mdl-zoor-ripple">
+                <!--这里也要利用angular改一改-->
+                <img src="../public/assets/img/user.jpg" alt="..." class="img-circle img-user">
+                <span class="profile-info">Daniel Johnson<small>Administrator</small>
+                </span>
+              <!--span class="hidden-sm hidden-md">John.Smith</span> <b class="caret"></b-->
+              </a>
+              <!-- dropdown -->
+              <ul class="dropdown-menu animation-dock">
+                <li class="dropdown-header">Config</li>
+                <li><a href="#">My profile</a></li>
+                <li><a href="#">My blog <span class="badge style-danger pull-right">16</span></a></li>
+                <li><a href="#">My appointments</a></li>
+                <li class="divider"></li>
+                <li><a href="#"><i class="fa fa-fw fa-lock"></i> Lock</a></li>
+                <li><a href="#"><i class="fa fa-fw fa-sign-out"></i> Logout</a></li>
+              </ul><!--end .dropdown-menu -->
+            </li><!--end .dropdown -->
+          </ul><!-- / user -->
+        </nav>
+      </div>
+    </header>
+
+    <div id="wrapper" class="mdl-layout__content">
+      <!--要返回顶端，必须加下面这个链接-->
+      <a name="top"></a>
+      <!--main content-->
+      <div class="main-content-layout">
+        <div class="overlay"></div>
+
+        <!-- Sidebar -->
+        <nav class="navbar navbar-inverse mdl-navbar-top navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+          <ul class="nav sidebar-nav">
+            <li class="sidebar-brand"><a href="#"> 管理面板</a></li>
+            <li><a href="#"><i class="fa fa-fw fa-home"></i> 帐户管理</a></li>
+            <li><a href="#"><i class="fa fa-fw fa-folder"></i> 课程管理</a></li>
+            <li><a href="#"><i class="fa fa-fw fa-file"></i> 成绩管理</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-plus"></i> 网站信息 <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li class="dropdown-header">网站信息</li>
+                <li><a href="#">服务负载</a></li>
+                <li><a href="#">客户邮件</a></li>
+                <li><a href="#">访问统计</a></li>
+                <li><a href="#">主题管理</a></li>
+                <li><a href="#">语言管理</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <!-- /#sidebar-wrapper -->
+
+        <main class="container">
+          <setcion>
+            <!-- BEGIN DARK TABLE -->
+            <div class="row">
+              <div class="col-lg-12">
+                <h4>Dark background</h4>
+              </div><!--end .col -->
+              <div class="col-lg-3 col-md-4">
+                <article class="margin-bottom-xxl">
+                  <p>
+                    If you want to, you can place a table on a dark background
+                  </p>
+                </article>
+              </div><!--end .col -->
+              <div class="col-lg-offset-1 col-md-8">
+                <div class="card style-primary">
+                  <div class="card-body">
+                    <table class="table table-hover no-margin">
+                      <thead>
+                        <tr>
+                          <th>#</th>
+                          <th>First Name</th>
+                          <th>Last Name</th>
+                          <th>Username</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>Mark</td>
+                          <td>Otto</td>
+                          <td>@mdo</td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>Jacob</td>
+                          <td>Thornton</td>
+                          <td>@fat</td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td>Larry</td>
+                          <td>the Bird</td>
+                          <td>@twitter</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div><!--end .card-body -->
+                </div><!--end .card -->
+                <em class="text-caption">Table on a dark background</em>
+              </div><!--end .col -->
+            </div><!--end .row -->
+            <!-- END DARK TABLE -->
+          </section>
+        </main>
+      </div>
+
+      <footer class="mdl-mega-footer">
+        <div class="mdl-mega-footer__middle-section">
+
+          <div class="mdl-mega-footer__drop-down-section">
+            <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+            <h1 class="mdl-mega-footer__heading">Features</h1>
+            <ul class="mdl-mega-footer__link-list">
+              <li><a href="#">About</a></li>
+              <li><a href="#">Terms</a></li>
+              <li><a href="#">Partners</a></li>
+              <li><a href="#">Updates</a></li>
+            </ul>
+          </div>
+
+          <div class="mdl-mega-footer__drop-down-section">
+            <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+            <h1 class="mdl-mega-footer__heading">Details</h1>
+            <ul class="mdl-mega-footer__link-list">
+              <li><a href="#">Specs</a></li>
+              <li><a href="#">Tools</a></li>
+              <li><a href="#">Resources</a></li>
+            </ul>
+          </div>
+
+          <div class="mdl-mega-footer__drop-down-section">
+            <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+            <h1 class="mdl-mega-footer__heading">Technology</h1>
+            <ul class="mdl-mega-footer__link-list">
+              <li><a href="#">How it works</a></li>
+              <li><a href="#">Patterns</a></li>
+              <li><a href="#">Usage</a></li>
+              <li><a href="#">Products</a></li>
+              <li><a href="#">Contracts</a></li>
+            </ul>
+          </div>
+
+          <div class="mdl-mega-footer__drop-down-section">
+            <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+            <h1 class="mdl-mega-footer__heading">FAQ</h1>
+            <ul class="mdl-mega-footer__link-list">
+              <li><a href="#">Questions</a></li>
+              <li><a href="#">Answers</a></li>
+              <li><a href="#">Contact us</a></li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="mdl-mega-footer__bottom-section">
+          <ul class="mdl-mega-footer__link-list">
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Privacy & Terms</a></li>
+          </ul>
+        </div>
+
+      </footer><!--footer end-->
+
+    </div><!--mdl-content end-->
+  </div><!--mdl-layout end-->
+
+</body>
+
+</html>
