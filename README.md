@@ -7,7 +7,10 @@
 - Usage
 
 ## Summery
-　　采用MEAN框架, Nodejs + Express +　Vue ＋ Mongodb, 页面使用Bootstrp栅格式设计, MD风格, 图表表现使用highchat.js, 主要有以下特性:
+
+　　完成度　10% ...
+
+　　采用Nodejs + Express +　Vue ＋ Mongodb, 页面使用Bootstrp栅格式设计, MD风格, 表格使用datatable.js, 图表表现使用highchat.js, 主要有以下特性:
 
 1. 全套功能的成绩管理
 2. 科学统计与图表显示
